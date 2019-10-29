@@ -1,0 +1,105 @@
+<html>
+  <style>
+    .dot {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    }
+    .column {
+      height: 50px;
+      width: 50px;
+    }
+  </style>
+  <body>
+    <div style="text-align:center">
+      <h1>Connect FOUR</h1>
+      <table align="center" id="table">
+        <tr>
+          <th></th>
+          <th><input type="button" onclick="DropToken('A');" value="A" class="column" id="Column"></th>
+          <th><input type="button" onclick="DropToken('B');" value="B" class="column" id="Column"></th>
+          <th><input type="button" onclick="DropToken('C')" value="C" class="column" id="Column"></th>
+          <th><input type="button" onclick="DropToken('D')" value="D" class="column" id="Column"></th>
+          <th><input type="button" onclick="DropToken('E')" value="E" class="column" id="Column"></th>
+          <th><input type="button" onclick="DropToken('F')" value="F" class="column" id="Column"></th>
+          <th><input type="button" onclick="DropToken('G')" value="G" class="column" id="Column"></th>
+        </tr>
+        <tr>
+          <th>7</th>
+          <th><span class="dot" id="A7" style="background-color: #bab;"></span></th>
+          <th><span class="dot" id="B7" style="background-color: #bba;"></span></th>
+          <th><span class="dot" id="C7" style="background-color: #bbb;"></span></th>
+          <th><span class="dot" id="D7" style="background-color: #cbb;"></span></th>
+          <th><span class="dot" id="E7" style="background-color: #abb;"></span></th>
+          <th><span class="dot" id="F7" style="background-color: #bab;"></span></th>
+          <th><span class="dot" id="G7" style="background-color: #bba;"></span></th>
+        </tr>
+        <tr>
+          <th>6</th>
+          <th><span class="dot" id="A6" style="background-color: #bbb;"></span></th>
+          <th><span class="dot" id="B6" style="background-color: #cbb;"></span></th>
+          <th><span class="dot" id="C6" style="background-color: #abb;"></span></th>
+          <th><span class="dot" id="D6" style="background-color: #bab;"></span></th>
+          <th><span class="dot" id="E6" style="background-color: #bba;"></span></th>
+          <th><span class="dot" id="F6" style="background-color: #bbb;"></span></th>
+          <th><span class="dot" id="G6" style="background-color: #cbb;"></span></th>
+        </tr>
+        <tr>
+          <th>5</th>
+          <th><span class="dot" id="A5" style="background-color: #abb;"></span></th>
+          <th><span class="dot" id="B5" style="background-color: #bab;"></span></th>
+          <th><span class="dot" id="C5" style="background-color: #bba;"></span></th>
+          <th><span class="dot" id="D5" style="background-color: #bbb;"></span></th>
+          <th><span class="dot" id="E5" style="background-color: #cbb;"></span></th>
+          <th><span class="dot" id="F5" style="background-color: #abb;"></span></th>
+          <th><span class="dot" id="G5" style="background-color: #bab;"></span></th>
+        </tr>
+        <tr>
+          <th>4</th>
+          <th><span class="dot" id="A4" style="background-color: #bba;"></span></th>
+          <th><span class="dot" id="B4" style="background-color: #bbb;"></span></th>
+          <th><span class="dot" id="C4" style="background-color: #cbb"></span></th>
+          <th><span class="dot" id="D4" style="background-color: #abb;"></span></th>
+          <th><span class="dot" id="E4" style="background-color: #bab;"></span></th>
+          <th><span class="dot" id="F4" style="background-color: #bba;"></span></th>
+          <th><span class="dot" id="G4" style="background-color: #bbb;"></span></th>
+        </tr>
+        <tr>
+          <th>3</th>
+          <th><span class="dot" id="A3" style="background-color: #cbb;"></span></th>
+          <th><span class="dot" id="B3" style="background-color: #abb;"></span></th>
+          <th><span class="dot" id="C3" style="background-color: #bab;"></span></th>
+          <th><span class="dot" id="D3" style="background-color: #bba;"></span></th>
+          <th><span class="dot" id="E3" style="background-color: #bbb;"></span></th>
+          <th><span class="dot" id="F3" style="background-color: #cbb;"></span></th>
+          <th><span class="dot" id="G3" style="background-color: #abb;"></span></th>
+        </tr>
+        <tr>
+          <th>2</th>
+          <th><span class="dot" id="A2" style="background-color: #bab;"></span></th>
+          <th><span class="dot" id="B2" style="background-color: #bba;"></span></th>
+          <th><span class="dot" id="C2" style="background-color: #bbb;"></span></th>
+          <th><span class="dot" id="D2" style="background-color: #cbb;"></span></th>
+          <th><span class="dot" id="E2" style="background-color: #abb;"></span></th>
+          <th><span class="dot" id="F2" style="background-color: #bab;"></span></th>
+          <th><span class="dot" id="G2" style="background-color: #bba;"></span></th>
+        </tr>
+        <tr>
+          <th>1</th>
+          <th><span class="dot" id="A1" style="background-color: #bbb;"></span></th>
+          <th><span class="dot" id="B1" style="background-color: #cbb;"></span></th>
+          <th><span class="dot" id="C1" style="background-color: #abb;"></span></th>
+          <th><span class="dot" id="D1" style="background-color: #bab;"></span></th>
+          <th><span class="dot" id="E1" style="background-color: #bba;"></span></th>
+          <th><span class="dot" id="F1" style="background-color: #bbb;"></span></th>
+          <th><span class="dot" id="G1" style="background-color: #cbb;"></span></th>
+        </tr>
+      </table>
+      <p id="Player Turn">Red Player's Turn!</p>
+    </div>
+    <div id="chalk"></div>
+  </body>
+  <script src="chalk.20190904.js"></script>
+  <script src="project1.js"></script>
+</html>
